@@ -1,0 +1,238 @@
+.flex {
+  background-color: #00c7ce;
+  height: 50vh;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+
+.flex1 {
+  background-color: #00c7ce;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  /* Flexコンテナーの内容の並ぶ方向を指定できます。 */
+  /* row,column,column-reverse がある*/
+}
+.flex1 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+
+.flex2 {
+  background-color: #00c7ce;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  /* Flexコンテナーの内容の横幅の合計値が、Flexコンテナー自体の横幅を超過する場合の折り返しの方法を指定します。 */
+}
+.flex2 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+
+.flex3 {
+  background-color: #00c7ce;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  flex-flow: row wrap;
+  /* flex-directionとflex-wrapをまとめて指定します。 */
+}
+.flex3 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+
+.flex4 {
+  background-color: #00c7ce;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  /* Flexコンテナーの内容の横方向の整列方法を指定できます。 */
+  /* flex-end,center,space-betweenなど */
+}
+.flex4 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+
+.flex5 {
+  background-color: #00c7ce;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  align-content: flex-end;
+  /* Flexコンテナーの内容が複数行になった際の整列方法を指定できます。 内容が1行しかない場合は効果がありません。 */
+}
+.flex5 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+
+.flex6 {
+  background-color: #00c7ce;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+}
+.flex6 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+/* order,Flexアイテムの順序を指定できます。 */
+.flex6 > div:nth-child(1) {
+  order: 3;
+}
+.flex6 > div:nth-child(2) {
+  order: 4;
+}
+.flex6 > div:nth-child(3) {
+  order: 1;
+}
+.flex6 > div:nth-child(4) {
+  order: 2;
+}
+
+.flex7 {
+  background-color: #00c7ce;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+}
+.flex7 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+/* flex-glow,Flexアイテムの横幅の伸びる比率を指定できます。 */
+.flex7 > div:nth-child(1) {
+  flex-grow: 0;
+}
+.flex7 > div:nth-child(2) {
+  flex-grow: 1;
+}
+.flex7 > div:nth-child(3) {
+  flex-grow: 2;
+}
+.flex7 > div:nth-child(4) {
+  flex-grow: 3;
+}
+
+.flex8 {
+  background-color: #00c7ce;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+}
+.flex8 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+/* flex-shrink ,Flexアイテムの横幅の縮む比率を指定できます。*/
+.flex8 > div {
+  width: 300px;
+}
+.flex8 > div:nth-child(1) {
+  flex-shrink: 0;
+}
+.flex8 > div:nth-child(2) {
+  flex-shrink: 1;
+}
+.flex8 > div:nth-child(3) {
+  flex-shrink: 2;
+}
+.flex8 > div:nth-child(4) {
+  flex-shrink: 3;
+}
+
+.flex9 {
+  background-color: #00c7ce;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+}
+.flex9 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+/* flex-basis,Flexアイテムの横幅を指定できます。 */
+.flex9 {
+  display: flex;
+  /* flex-direction: row; */
+}
+.flex9 > div {
+  flex-basis: 100px;
+}
+
+.flex10 {
+  background-color: #00c7ce;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+}
+.flex10 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+.flex10 > div {
+  /* 単位がない数値を1つ指定 → flex-growに */
+  flex: 2;
+  /* 単位のある数値を1つ指定 → flex-basisに */
+  flex: 10em;
+  flex: 30%;
+  /* 単位がない数値を2つ指定 → flex-grow | flex-shrink に */
+  flex: 2 2;
+  /* 値を3つ指定する → 必ず flex-grow | flex-shrink | flex-basis に */
+  flex: 2 2 10%;
+}
+
+/* Flexアイテムの縦方向の位置を、アイテムごとに個別に指定できます。 */
+.flex11 {
+  background-color: #00c7ce;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+}
+.flex11 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+.flex11 > div:nth-child(2) {
+  align-self: flex-start;
+}
+
+.flex12 {
+  background-color: #00c7ce;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+.flex12 > div {
+  background-color: #fff;
+  margin: 5px;
+  font-size: 30px;
+}
+.flex12 > :first-child {
+  margin-right: auto;
+}
